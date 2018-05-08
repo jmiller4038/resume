@@ -1,0 +1,362 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+
+%Header/Footer Stuff
+\usepackage{fancyhdr}  % use this package to get a 2 line header
+\renewcommand{\headrulewidth}{0pt} % suppress line drawn by default by fancyhdr
+\setlength{\headheight}{12pt} % allow room for 2-line header
+\setlength{\headsep}{12pt}  % space between header and text
+\setlength{\headheight}{12pt} % allow room for 2-line header
+\pagestyle{fancy}     % set pagestyle for document
+\rhead{ {\it Jacob O. Miller}\\{\it p. \thepage} } % put text in header (right side)
+\cfoot{}                                     % the foot is empty
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+\thispagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Personal Info
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+{\LARGE \textbf{Jacob O. Miller}}\\
+{\large US CITIZEN}
+
+3937 Saddleridge Circle\ \ \textbullet
+\ \ Dayton, OH 45424
+\\
+(937) 266-4672\ \ \textbullet
+\ \ Miller.4038@osu.edu
+\end{center}
+\hrule
+\vspace{-0.4em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Objective
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Objective}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+Seeking position as an Operations Research Analyst
+\end{indentsection}
+
+\hrule
+\vspace{-0.4em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Education
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Education}
+\begin{itemize}
+	\parskip=0.1em
+	\item 
+	\headerrow
+		{\textbf{The Ohio State University}}
+		{\textbf{Columbus, OH}}
+	\\
+	\headerrow
+		{\emph{College of Engineering, M.S. Operations Research} \hspace{7em} GPA 3.91 (4.0)}
+		{\emph{2010 -- 2011}}
+	\\
+	\headerrow
+		{\emph{College of Engineering, B.S. Industrial and Systems Engineering} \hspace{1em} GPA 3.54 (4.0)}
+		{\emph{2006 -- 2010}}
+	\begin{itemize*}
+		\item
+		{{Thesis:  The Economic Impact of Emissions Caps on Plug-in Hybrid Electric Vehicles}}
+	\end{itemize*}
+\end{itemize}
+\hrule
+\vspace{-0.4em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Work Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Work Experience}
+\begin{itemize}
+	\parskip=0.1em
+	\item
+	\headerrow
+		{\textbf{U.S. Department of Energy,} Energy Information Adminstration}
+		{\textbf{www.eia.gov}}
+	\\
+	\headerrow
+		{\emph{Operations Research Analyst}}
+		{\emph{Summer 2011}}
+	\begin{itemize*}
+   		\item On the development team for the Liquid Fuels Market Model of the National Energy Modeling System used to forecast U.S. oil usage for the Annual Energy Outlook report
+  		\item Developed a robust optimization approach to improve the model under uncertainty
+  		 \item Automated output reporting tools for internal model tuning
+	\end{itemize*}
+	\item
+	\headerrow
+		{\textbf{Pilkington}}
+		{\textbf{www.pilkington.com}}
+	\\
+	\headerrow
+		{\emph{Supply Chain Analyst}}
+		{\emph{Spring 2011}}
+	\begin{itemize*}
+   		\item Developed optimization model to determine placement of additional distribution centers for Pilkington's North American supply chain to minimize customer replenishment times
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{The Ohio State University,} Department of Industrial and Systems Engineering}
+		{\textbf{www.ise.osu.edu}}
+	\\
+	\headerrow
+		{\emph{Graduate Teaching Associate}}
+		{\emph{2010 -- Present}}
+	\begin{itemize*}
+		 \item Instructed linear programming and scheduling courses for engineers
+		 \item Responsible for teaching software packages and grading tests and projects
+	\end{itemize*}
+	\item
+	\headerrow
+		{\textbf{Sandvik - Diamond Innovations}}
+		{\textbf{www.sandvik.com}}
+	\\
+	\headerrow
+		{\emph{Project Manager}}
+		{\emph{2009 -- 2010}}
+	\begin{itemize*}
+		\item Cost savings through variation reduction totaled \$40k annually
+		\item Project used a statistically designed experiment to optimize production processes
+		\item Received Lean/Six Sigma greenbelt certification from The Ohio State University
+	\end{itemize*}
+%	\item
+%	\headerrow
+%		{\textbf{Rockwell Automation}}
+%		{\textbf{www.rockwellautomation.com}}
+%	\\
+%	\headerrow
+%		{\emph{Project Team Leader}}
+%		{\emph{2008 -- 2009}}
+%	\begin{itemize*}
+%		\item Runner-up in international simulation competition sponsored by the Institute of Industrial Engineers
+%		\item Developed and analyzed a model of a complex manufacturing system to improve cost and quality
+%		\item Presented results at the 2009 Global IIE Conference to company executives and field experts
+%	\end{itemize*}
+	\item
+	\headerrow
+		{\textbf{The Ohio State University Medical Center,} Management Services}
+		{\textbf{www.medicalcenter.osu.edu}}
+	\\
+	\headerrow
+		{\emph{Management Engineer}}
+		{\emph{2008 -- 2009}}
+	\begin{itemize*}
+		\item Identified top savings opportunities within the organization each quarter through benchmarking
+		\item Prepared decision support information for weekly upper management meetings
+		\item Managed highly sensitive budget and staffing information
+	\end{itemize*}
+%	\item
+%	\headerrow
+%		{\textbf{Everready Battery Corp}}
+%		{\textbf{www.energizer.com}}
+%	\\
+%	\headerrow
+%		{\emph{Quality Engineer}}
+%		{\emph{Summer 2008}}
+%	\begin{itemize*}
+%		\item Process layout project improved manufacturing line performance
+%		\item Responsibilities included continuous improvement initiatives and oversight of daily quality issues
+%		\item Gave monthly safety briefings to all workforce personnel
+%	\end{itemize*}
+\end{itemize}
+\hrule
+\vspace{-0.4em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Research Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Research Experience}
+\begin{itemize}
+	\parskip=0.1em
+	\item
+	\headerrow
+		{\textbf{Cardinal Health Inc}}
+		{\textbf{www.cardinal.com}}
+	\\
+	\headerrow
+		{\emph{Research Assistant, Professors J.L. Higle \& C.H. Xia}}
+		{\emph{Summer 2010}}
+	\begin{itemize*}
+		\item Developed methodology to identify customer ill-intent in pharmaceutical purchases to comply with DEA regulations through the use of data mining techniques
+		\item Extensive use of SAS, Visual Basic, and R to manipulate and analyze large data sets
+	\end{itemize*}
+	\item
+	\headerrow
+		{\textbf{The Ohio State University,} Department of Industrial and Systems Engineering}
+		{\textbf{www.ise.osu.edu}}
+	\\
+	\headerrow
+		{\emph{Research Assistant, Professor R. Sioshansi}}
+		{\emph{2009 -- 2010}}
+	\begin{itemize*}
+		\item Developed a large-scale mixed integer program to investigate plug-in hybrid electric vehicle charging cycles and economics under emissions constraints
+		\item Recieved funding from The Ohio State University Honors Committee
+		\item Presented results at the Denman Forum at The Ohio State University
+	\end{itemize*}
+	\item
+	\headerrow
+		{\textbf{The Air Force Institute of Technology,} Center for Operational Analysis}
+		{\textbf{www.afit.edu/en/coa}}
+	\\
+	\headerrow
+		{\emph{Research Assistant}}
+		{\emph{Summer 2009}}
+	\begin{itemize*}
+		\item Investigated statistical methods to reduce sample sizes for Department of Defense testing and evaluation
+		\item Worked with the Air Force Global Logistics Support Center
+	\end{itemize*}
+\end{itemize}
+\hrule
+\vspace{-0.4em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Skills and Qualifications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Qualifications and Interests}
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Interests:]
+	Stochastic Models, Game Theory, Machine Learning
+	\item[Languages:]
+	SQL, Java, Python, R, \LaTeX, AMPL, CPLEX, GAMS, VB
+	\item[Personal:]
+	Project management, public and professional presentation
+	\item[Certifications:]
+	Lean/Six Sigma greenbelt from OSU
+\end{description*}
+\end{indentsection}
+\hrule
+\vspace{-0.4em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Publications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Publications}
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+R. Sioshansi and J. Miller, {\bf ``Plug-in Hybrid Electric Vehicles Can Be Clean and Economical in Dirty Power Systems,''} Energy Policy, Vol 39, No 10, pp 6151-6161, October, 2011.
+\end{indentsection}
+\hrule
+\vspace{-0.4em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Coursework
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Relevant Coursework}
+Linear, non-linear and integer programming, analysis of algorithms, stochastic processes,  decision analysis, scheduling, inventory planning, discrete event simulation, statistical process control, design and analysis of experiments, project management \\
+\hrule
+\vspace{-0.4em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Professional Organizations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Professional Organizations}
+\begin{itemize}
+	\parskip=0.1em
+	\item
+	\headerrow
+		{\textbf{The Institute for Operations Research and Management Science}}
+		{\textbf{www.informs.org}}
+	\\
+	\headerrow
+		{\emph{Member} OSU \& National Chapters}
+		{\emph{2008 -- Present}}
+	\item
+	\headerrow
+		{\textbf{Institute of Industrial Engineers}}
+		{\textbf{www.iienet.org}}
+	\\
+	\headerrow
+		{\emph{Member,} OSU, NE Region, National Chapters}
+		{\emph{2007 -- Present}}
+	\item
+	\headerrow
+		{\textbf{Alpha Pi Mu} Industrial Engineering Honorary}
+		{\textbf{www.alphapimu.net}}
+	\\
+	\headerrow
+		{\emph{Officer,} OSU Chapter}
+		{\emph{2008 -- 2010}}
+\end{itemize}
+\hrule
+\vspace{-0.4em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Honors and Accomplishments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Honors and Accomplishments}
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+	{{The Ohio State University,} Graduate Teaching / Research Assistantship}
+	{\emph{2010 -- 2014}}
+
+	\item
+	\headerrow
+	{Graduated Cum Laude and with Distinction}
+	{\emph{2010}}
+
+	\item
+	\headerrow
+	{Runner-up 2008 IIE International Simulation Competition}
+	{\emph{2008 -- 2009}}
+
+	\item
+	\headerrow
+	{{Honors Societies:} Alpha Pi Mu, Alpha Lambda Delta, Phi Eta Sigma}
+
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Personal Interests
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Personal Interests}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+Piano, Guitar, Running, Basketball, Ohio State athletics, RTS/RPG games, Computers
+\end{indentsection}
+
+\end{document}
